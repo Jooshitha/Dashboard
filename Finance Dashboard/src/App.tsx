@@ -16,7 +16,6 @@ import {
   LogOut,
   Moon,
   PiggyBank,
-  Search,
   Settings,
   SlidersHorizontal,
   Sun,
@@ -83,7 +82,6 @@ const allCategories: Array<Category | 'All'> = [
   'Insurance',
 ]
 
-const monthBars = [31, 54, 49, 76, 72, 89]
 const cashFlowSeries = [
   { month: 'Nov', income: 255000, spend: 182000 },
   { month: 'Dec', income: 265000, spend: 191000 },
@@ -332,7 +330,6 @@ function App() {
   const monthlyTakeHome = totals.net || 120500
   const emergencyFund = 420000
   const expenseToSalaryRatio = Math.round((totals.expense / Math.max(salaryIncome || 275000, 1)) * 100)
-  const monthVolume = 176000
   const baselineSalary = salaryIncome || 275000
   const spentPct = Math.min(100, Math.round((totals.expense / Math.max(baselineSalary, 1)) * 100))
   const remainingToSave = Math.max(baselineSalary - totals.expense, 0)
