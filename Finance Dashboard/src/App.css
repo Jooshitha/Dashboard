@@ -1664,6 +1664,8 @@ tr:hover { background: rgba(79, 70, 229, 0.04); }
 .center-kpi.left { text-align: left; }
 .mobile-section-label { margin: 8px 0 0; }
 .mobile-balance-card { margin-top: 10px; }
+.mobile-velocity { align-items: flex-end; }
+.mobile-velocity h2 { font-size: clamp(2rem, 10vw, 2.7rem); line-height: 1.1; }
 .mobile-velocity strong { font-size: 3.2rem; }
 .alert { background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.04)); border-color: rgba(239, 68, 68, 0.2); }
 .mobile-nav { display: none; }
@@ -1851,9 +1853,9 @@ tr:hover { background: rgba(79, 70, 229, 0.04); }
 @media (max-width: 1080px) {
   .app-shell { grid-template-columns: 1fr; padding-bottom: 90px; }
   .left-rail, .desktop-only, .status-bar { display: none; }
-  .content { padding: 16px; }
+  .content { padding: 16px 16px calc(130px + env(safe-area-inset-bottom)); }
   .topbar { display: none; }
-  .mobile-page { display: grid; gap: 14px; }
+  .mobile-page { display: grid; gap: 14px; padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
   .mobile-header-row { justify-content: space-between; gap: 12px; }
   .profile-pill { display: flex; align-items: center; gap: 10px; }
   .profile-pill h2 { font-size: 1.9rem; margin: 0; }
@@ -1884,6 +1886,8 @@ tr:hover { background: rgba(79, 70, 229, 0.04); }
 @media (max-width: 680px) {
   .cards.two, .mobile-kpi { grid-template-columns: 1fr; }
   .mobile-filters { grid-template-columns: 1fr; }
+  .profile-pill h2 { font-size: 1.35rem; }
+  .mobile-velocity strong { font-size: 2.6rem; }
   .list-item { grid-template-columns: auto 1fr; }
   .right-val { grid-column: 2; text-align: left; }
   .goals-form { grid-template-columns: 1fr; }
