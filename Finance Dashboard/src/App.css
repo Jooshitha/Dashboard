@@ -1850,7 +1850,7 @@ tr:hover { background: rgba(79, 70, 229, 0.04); }
 
 @media (max-width: 1080px) {
   .app-shell { grid-template-columns: 1fr; padding-bottom: 90px; }
-  .left-rail, .desktop-only, .status-bar, .tab-panel { display: none; }
+  .left-rail, .desktop-only, .status-bar { display: none; }
   .content { padding: 16px; }
   .topbar { display: none; }
   .mobile-page { display: grid; gap: 14px; }

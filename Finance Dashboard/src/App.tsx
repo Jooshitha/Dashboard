@@ -1853,6 +1853,10 @@ function App() {
         {!isMobile && activeTab === 'transactions' && renderDesktopTransactions()}
         {!isMobile && activeTab === 'insights' && renderDesktopInsights()}
 
+        {isMobile && activeTab === 'dashboard' && renderMobileDashboard()}
+        {isMobile && activeTab === 'transactions' && renderMobileTransactions()}
+        {isMobile && activeTab === 'insights' && renderMobileInsights()}
+
         {activeTab === 'settings' && (
           <section className="tab-panel settings-panel">
             <div className="settings-header">
@@ -1955,10 +1959,6 @@ function App() {
           <span>LAST SYNC: 2M AGO</span>
         </footer>
       </main>
-
-      {isMobile && activeTab === 'dashboard' && renderMobileDashboard()}
-      {isMobile && activeTab === 'transactions' && renderMobileTransactions()}
-      {isMobile && activeTab === 'insights' && renderMobileInsights()}
 
       <nav className="mobile-nav">
         <button className={activeTab === 'dashboard' ? 'active' : ''} onClick={() => setActiveTab('dashboard')}>
